@@ -1,80 +1,216 @@
-This is the Official repository of **Java Spring Boot: Professional eCommerce Project Masterclass** on Udemy
+Ecommerce Platform
+Full-Stack Secure Commerce System | Spring Boot + React
+📌 Project Overview
 
-# The Ultimate Java and Spring Boot Mastery Roadmap
+This project is a full-stack E-commerce platform designed with a production-oriented backend architecture and secure authentication mechanisms.
+The system enables end-to-end commerce workflows including:
 
-Welcome to your one-stop-shop for mastering Java and Spring Boot! This repository offers a comprehensive learning experience with high-quality resources and community support. Dive into over 150+ hours of premium content, with everything you need to excel at Java and Spring Boot development.
+User authentication & authorization
 
-## 🎓 Learning Roadmap
+Product and category management
 
-Most of the courses below are available in **Udemy For Business**, so if you have subscription - you can get FREE access.
-Here’s a structured path to enhance your skills with detailed courses available:
+Cart and order lifecycle
 
-1. **[Spring Boot By Building Complex Projects Step by Step](https://link.embarkx.com/spring-boot) (90+ Hours of Content)**
-2. **[Master Spring Boot Microservices by Building eCommerce Project](https://link.embarkx.com/microservices) (55+ Hours of Content)**
-3. **[Full Stack AI DevOps for Software Developers (AWS, Azure, GCP)](https://link.embarkx.com/devops) (20+ Hours of Content)**
-4. **[Learn Java with 60+ Hours of Content](http://link.embarkx.com/java) (60+ Hours of Content)**
-5. **[Master Spring Security with React JS + OAuth2](https://link.embarkx.com/spring-security) (34+ Hours of Content)**
-6. **[Master IntelliJ IDEA](http://link.embarkx.com/intellij) (3+ Hours of Content)**
+Role-based access control
 
+Secure payment processing
 
-## 🌟 With All Our Courses You Gain Access To
-
-- 📝 **Notes:** Detailed and downloadable notes to accompany each lesson.
-- 💻 **Source Code:** Full access to the source code used in the tutorials.
-- 🤔 **Doubt Solving:** Responsive instructor and community support.
-- 🎥 **High-Quality HD Videos:** Easy to understand, high-definition video tutorials.
-- 🔄 **Free Lifetime Updates:** Continuous updates to course content at no extra cost.
-
-## 📚 Why Choose This Mastery Series?
-
-With this series, you're not just learning; you're preparing to dominate the field of Java and Spring Boot development. Our structured learning path ensures that you build your skills progressively, with each course designed to build on the knowledge gained from the previous one.
-
-### Join Us Now!
-
-Start your journey today to become a master at Java and Spring Boot. Our community and expert instructors are here to support your learning every step of the way. **Enroll and start building your future, today!**
+The backend is built using Spring Boot with layered architecture and stateless JWT authentication.
+The frontend is built using React for responsive UI and seamless API interaction.
+This project demonstrates practical implementation of scalable backend engineering principles.
 
 
 
+🏗️ System Architecture
+
+The backend follows a layered architecture:
+
+Client (React)
+      ↓
+REST Controllers
+      ↓
+Service Layer (Business Logic)
+      ↓
+Repository Layer (JPA/Hibernate)
+      ↓
+MySQL Database
+
+Architectural Highlights
+
+Separation of concerns
+DTO-based request/response modeling
+Global exception handling
+Stateless JWT authentication
+Role-based authorization
+Modular configuration design
+
+🔐 Security Implementation
+
+JWT-based stateless authentication
+Spring Security filter chain
+BCrypt password hashing
+Role-based access control (Admin / User)
+Protected API endpoints
+Custom authentication entry point
+Centralized exception handling
+
+Authentication Flow:
+
+User Login → JWT Generated → Token Stored Client-Side → 
+JWT Sent in Authorization Header → 
+Spring Security Validates → Access Granted/Denied
 
 
-# Usage Policy for Course Materials
+🧩 Core Features
 
-## Instructor Information
+👤 User Capabilities
 
-**Instructor:** Faisal Memon  
-**Company:** [EmbarkX.com](http://www.embarkx.com)
+Register / Login
+Secure JWT session
+Browse products
+Add/remove items from cart
+Checkout
+Place orders
+View order history
 
-## Policy Overview
+🛠️ Admin Capabilities
 
-This document outlines the guidelines and restrictions concerning the use of course materials provided by EmbarkX, including but not limited to PDF presentations, code samples, and video tutorials.
+Product CRUD operations
+Category management
+Order status management
+Seller management 
+Dashboard analytics 
 
-### 1. Personal Use Only
+🛠️ Tech Stack
 
-The materials provided in this course are intended for **your personal use only**. They are to be used solely for the purpose of learning and completing this course.
+Backend :
 
-### 2. No Unauthorized Sharing or Distribution
+Java
+Spring Boot
+Spring Security
+JWT
+Spring Data JPA (Hibernate)
+MySQL
+Maven
 
-You are **not permitted** to share, distribute, or publicly post any course materials on any websites, social media platforms, or other public forums without prior written consent from the instructor.
+Frontend :
 
-### 3. Intellectual Property
+React (Vite)
+Axios
+Context API / Redux 
+Stripe / PayPal integration 
 
-All course materials are protected by copyright laws and are the intellectual property of Faisal Memon and EmbarkX. Unauthorized use, reproduction, or distribution of these materials is **strictly prohibited**.
+Tools :
 
-### 4. Reporting Violations
-
-If you become aware of any unauthorized sharing or distribution of course materials, please report it immediately to [embarkxofficial@gmail.com](mailto:embarkxofficial@gmail.com).
-
-### 5. Legal Action
-
-We reserve the right to take legal action against individuals or entities found to be violating this usage policy.
-
-## Thank You
-
-Thank you for respecting these guidelines and helping us maintain the integrity of our course materials.
-
-## Contact Information
-
-- **Email:** [embarkxofficial@gmail.com](mailto:embarkxofficial@gmail.com)
-- **Website:** [www.embarkx.com](http://www.embarkx.com)
+Git & GitHub
+Postman
+IntelliJ IDEA
 
 
+
+📂 Repository Structure
+Ecommerce-Platform/
+│
+├── backend/      → Spring Boot application
+├── frontend/     → React application
+├── ecommerce-api.postman_collection.json        → API documentation (Postman collection)
+└── README.md
+
+🚀 Running the Project Locally
+1️⃣ Backend Setup
+cd backend
+mvn clean install
+mvn spring-boot:run
+
+Configure database in:
+
+backend/src/main/resources/application.properties
+
+Example:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+2️⃣ Frontend Setup
+cd frontend
+npm install
+npm run dev
+
+Frontend runs on:
+
+http://localhost:5173
+
+
+Backend runs on:
+
+http://localhost:8080
+
+
+
+📬 API Documentation
+
+Postman collection available inside:
+ecommerce-api.postman_collection.json
+
+If Swagger is enabled:
+
+http://localhost:8080/swagger-ui/
+🗄️ Database Design
+
+Key Entities:
+
+User
+Role
+Product
+Category
+Cart
+CartItem
+Order
+OrderItem
+Payment
+Address
+Relationships follow normalized relational modeling with JPA mappings.
+
+
+
+🧠 Engineering Concepts Demonstrated
+
+Stateless authentication architecture
+Role-based security enforcement
+DTO mapping for API isolation
+Layered service architecture
+Transactional order processing
+Exception abstraction strategy
+Secure password storage
+RESTful endpoint design
+
+
+
+📈 Future Enhancements
+
+Docker containerization
+CI/CD pipeline integration
+Cloud deployment (AWS / GCP)
+Redis caching layer
+Microservices decomposition
+Search optimization (ElasticSearch)
+API rate limiting
+
+
+
+🌐 Deployment (Add When Live)
+
+Backend:
+
+https://your-backend-url
+
+Frontend:
+
+https://your-frontend-url
+
+
+
+👨‍💻 About the Developer
+
+Java backend-focused developer with strong interest in secure system design, scalable architecture, and cloud-native engineering.
+This project reflects hands-on experience building a real-world commerce system using industry-standard backend frameworks and security practices.
