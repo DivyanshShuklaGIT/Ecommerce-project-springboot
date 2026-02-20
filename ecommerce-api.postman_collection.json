@@ -1,34 +1,11 @@
 {
 	"info": {
 		"_postman_id": "e901da3d-88dd-479e-a9f9-2a1a38b6282b",
-		"name": "Java Spring Boot: Professional eCommerce Project Masterclass",
+		"name": "Ecommerce Platform - REST API Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28392683"
 	},
 	"item": [
-		{
-			"name": "SocialMedia APIs",
-			"item": [
-				{
-					"name": "GetUsers",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/social/users",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"social",
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
 				{
 					"name": "GetUsers",
 					"request": {
@@ -102,32 +79,6 @@
 				}
 			]
 		},
-		{
-			"name": "Hello World App",
-			"item": [
-				{
-					"name": "http://localhost:8080/hello",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "Spring Boot"
-						},
-						"url": {
-							"raw": "http://localhost:8080/hello",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"hello"
-							]
-						}
-					},
-					"response": []
-				},
 				{
 					"name": "http://localhost:8080/hello",
 					"request": {
