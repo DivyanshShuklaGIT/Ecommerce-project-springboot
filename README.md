@@ -152,7 +152,7 @@ http://localhost:8080
 Postman collection available inside:
 ecommerce-api.postman_collection.json
 
-If Swagger is enabled:
+Swagger :
 
 http://localhost:8080/swagger-ui/
 🗄️ Database Design
